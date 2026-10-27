@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 // 1. Przekazanie przez wartość
@@ -11,8 +10,8 @@ void Posortuj_1(int a, int b) {
     }
     // Zmiany widoczne są tylko tutaj i giną po zakończeniu funkcji.
 }
-
 // 2. Przekazanie przez wskaźnik/adres
+
 void Posortuj_2(int *a, int *b) {
     if (*a > *b) {
         int temp = *a;
@@ -22,6 +21,7 @@ void Posortuj_2(int *a, int *b) {
 }
 
 // 3. Przekazanie przez referencję/alias
+
 void Posortuj_3(int &a, int &b) {
     if (a > b) {
         int temp = a;
@@ -56,3 +56,24 @@ int main() {
 
     return 0;
 }
+/*
+    RÓŻNICA MIĘDZY SPOSOBAMI PRZEKAZYWANIA PARAMETRÓW
+
+    Przez wartość:
+    Do funkcji trafiają kopie zmiennych, więc zmiany dotyczą tylko
+    zmiennych lokalnych, a oryginały x, y się nie zmieniają.
+
+    Przez wskaźnik:
+    Funkcja dostaje adresy zmiennych (&x, &y) i działa na nich za pomocą
+    dereferencji (*a), dzięki czemu oryginały zostają zmienione.
+
+    Przez referencję:
+    Funkcja dostaje alias, czyli drugą nazwę tej samej zmiennej.
+    Zapis jest prosty (a, b bez gwiazdek), a oryginały też się zmieniają.
+
+    Podsumowanie:
+    Przez wartość pracujemy na kopiach, a przez wskaźnik i referencję
+    na oryginałach. Różnica między tymi dwoma ostatnimi jest głównie
+    składniowa: referencja jest prostsza i bezpieczniejsza, a wskaźnik
+    może być pusty (nullptr) i można go przestawić na inną zmienną.
+*/
