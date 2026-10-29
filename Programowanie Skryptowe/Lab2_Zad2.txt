@@ -1,0 +1,7 @@
+cd /home/User/lab2
+touch tajne.txt
+echo "P@ssw0rd" >> tajne.txt
+chmod u=rw tajne.txt
+ls -l
+chmod u=rw,g=r tajne.txt
+

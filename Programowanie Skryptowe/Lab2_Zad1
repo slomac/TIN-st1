@@ -1,0 +1,14 @@
+pwd
+cd Documents
+cd /home
+mkdir lab2
+cd lab2
+mkdir pliki
+cd pliki
+touch empty.txt
+touch plan.txt
+echo "Witamy w Laboratorium" >> plan.txt
+ls 
+rm plan.txt
+cd ../
+rm -r pliki/

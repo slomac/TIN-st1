@@ -1,0 +1,7 @@
+touch logi.txt
+echo "OK:Operacja zakonczona\nError:Brak Pliku\nOK:Polaczenie udane\nERROR:blad dostepu" >> logi.txt
+grep ERROR logi.txt
+grep -v ERROR logi.txt 
+touch error_numbers.txt
+echo "2" >> error_numbers.txt 
+cat error_numbers.txt 

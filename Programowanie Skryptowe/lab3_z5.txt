@@ -1,0 +1,16 @@
+po pierwszym if:
+	- login = admin
+	- haslo = 1234
+	- proby = 3
+drugi if zostanie spelniony, poneiwaz po pierwszej bramce logicznej wartosc
+zmiennej proby wynosi 3
+
+co zostanie wyswietlone: 
+	BETA
+	admin 0000 3
+
+if [ "$proby" -gt 3 ] then; 
+
+przy takim warunku skrypt wyswietli BETA, poniewaz wartosc zmiennej proby nie
+jest wieksza od 3. zamiast liczby 3 mozna wpisac jakakolwiek inna liczbe, dla 
+ktorej warunek ten bedzie prawdziwy ( np -gt 5 ).

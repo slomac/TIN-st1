@@ -1,0 +1,3 @@
+- Nie zadziala polecenie grep ERROR dane/logi.txt, poniewaz w obecnej lokalizacji uzytkownika (~lab2/pliki) NIE istnieje folder dane. 
+-Wystarczy dodac "../" przed lokalizacja, aby dokladniej wskazac ze lokalizacja dane/logi.txt znajduje sie w poprzednim folderze.
+- Nie zmieni, poniewaz cd.. cofa uzytkownika do folderu wyzej ( w tym wypadku lab2), a polecenie cd /home/student/lab2 zrobi dokladnie to samo. 
