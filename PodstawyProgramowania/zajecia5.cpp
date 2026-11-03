@@ -55,7 +55,7 @@ bool pierwsza(int a){
 }
 
 
-double Euler(int x=15) {
+double Euler(int x) {
     double e = 1.0;      
     double wyraz = 1.0;  
 
@@ -121,9 +121,10 @@ int main(){
     if(pierwsza(h) == 1) cout<<"Pierwsza"<<endl;
     else cout<<"Nie jest pierwsza"<<endl;
 
-   
-    cout<<"Liczba eulera z dokladnoscia 15 iteracji: "<<setprecision(15)<<Euler(15)<<endl;
-
+    cout<<"Podaj dokladnosc obliczen liczby eulera: "<<endl;
+    int z;
+    cin>>z;
+    cout<<"Liczba eulera z dokladnoscia " << z << " iteracji: "<<setprecision(z)<<Euler(z)<<endl;
 
     
     cout<<"Podaj dwie liczby, ktorych NWD chcesz obliczyc: "<<endl;
