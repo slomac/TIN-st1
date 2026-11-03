@@ -22,6 +22,7 @@ void sortujRosnaco(int &a, int &b) {
         a = b; //mniejsza liczba b zostaje wpisana do zmiennej a 
         b = temp; //poprzednia wartosc a zostaje przypsiana do b, wiec w kazdym wypadku zmienna b przechowuje wieksza wartosc po posortowaniu 
     }
+    cout<<"Wieksza liczba: "<<b<<" Mniejsza liczba: "<<a<<endl;
 }
 int potega(int a, int b){
     int temp = a; // wpisuje a do zmiennej tymczasowej, aby nie zmienial sie wykladnik 
@@ -98,8 +99,6 @@ int main(){
     int c,d;
     cin>>c>>d;
     sortujRosnaco(c,d);
-    cout<<"Wieksza: "<<d<<" Mniejsza: "<<c<<endl;
-    
     
     
     cout<<"podaj wykladnik oraz potege: "<<endl;
