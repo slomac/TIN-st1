@@ -8,7 +8,7 @@
 
 
     bool kbhit()
-    {
+    {  
         termios term;
         tcgetattr(0, &term);
 
