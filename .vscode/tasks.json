@@ -1,28 +1,9 @@
 {
-    "version": "2.0.0",
     "tasks": [
         {
-            "type": "shell",
-            "label": "C/C++: clang++ build active file",
-            "command": "clang++",
-            "args": [
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": false
-            },
-            "problemMatcher": [
-                "$gcc"
-            ]
-        },
-        {
             "type": "cppbuild",
-            "label": "C/C++: clang kompiluj aktywny plik",
-            "command": "/usr/bin/clang",
+            "label": "C/C++: clang++ kompiluj aktywny plik",
+            "command": "/usr/bin/clang++",
             "args": [
                 "-fcolor-diagnostics",
                 "-fansi-escape-codes",
@@ -43,5 +24,6 @@
             },
             "detail": "Zadanie wygenerowane przez debuger."
         }
-    ]
+    ],
+    "version": "2.0.0"
 }
