@@ -1,0 +1,17 @@
+i=1, x=4
+7
+i=2, x=8
+13
+i=3, x=14
+Wynik: 14
+
+funkcja zostanie wywolana 2 razy 
+
+dla i=2 obliczy x=7
+dla i=3 obliczy x=13
+
+zmieni oba elementy, poniewaz wartosc x przed sprawdzeniem wynosi 5, warunek -gt nie bedzie 
+spelniony, poniewaz oznacza on >5 (gdy poprzedni oznaczal >=5), przez co koncowa wartosc x bedzie
+inna
+
+
