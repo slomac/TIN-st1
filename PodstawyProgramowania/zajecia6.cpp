@@ -731,7 +731,7 @@ int main(){
     else cout<<"Niepoprawny wybor."<<endl;
     sleep(1);
     cout<<endl;
-    system("read -n 1 -s -p \"Nacisnij dowolny klawisz, aby kontynuowac...\"");
+    system("read -n 1 -s -p \"Nacisnij dowolny klawisz, aby kontynuowac...\""); //dziala tylko na Linux/MacOS :D 
     cout<<endl;
     }while(wybor!=0);
     cout<<"Do zobaczenia!"<<endl;
