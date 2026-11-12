@@ -1,0 +1,19 @@
+bledne linie: 
+*/5 * * * * ~/test/cron.sh - powinno byc /1, jesli skrypt ma sie odpalac co minute 
+opcjonalny dodatkowy blad: tylda (~) czasami na niektorych distro jest zle interpretowana przez crona
+echo "Wpis z: $(date)" > ~/test/dziennik.txt - powinno byc >> zamiast >, bo nie chcemy nadpisac tylko dopisac 
+
+poprawiony wpis w cron:
+
+*/1 * * * * /sciezka_do_pliku/test/cron.sh
+
+poprawiony skrypt 
+#bin/bash
+echo "Wpis z: $(date)" >> /dziennik.txt
+df -h >> ~/dziennik.txt
+
+koemndy do sprawdzenia dzialania: 
+chmod +x cron.sh
+./cron.sh (lub poczekanie kilku minut az cron sam wykona ten skrypt kilka razy) 
+cat dziennik.txt
+

@@ -1,0 +1,6 @@
+plik1.txt
+plik2.txt
+plik3.txt
+plik4.txt
+plik5.txt
+Raport zostal utworzony dnia: czw. 12 lis 2026 12:05:21 CET

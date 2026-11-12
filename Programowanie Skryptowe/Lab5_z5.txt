@@ -1,0 +1,26 @@
+bledne linie:
+echo "Liczba skopiowanych plików: $LICZBA" > "$KOPIE/info.txt" - uzycie > nadpisze poprzednia linijke z data, czego nie chcemy. powinno byc >> zamiast > 
+LICZBA=$(ls "$KOPIE" | wc -l) to policzy wszystkie pliki w katalogu, nie tylko te powstale od ostatniego uzycia,
+moim rozwiazaniem jest policzenie ilosci plikow w folderze przed kopiowaniem,a nastepnie odjecie jej od liczby plikow po skopiowaniu.
+jesli pojawia sie nowe pliki licznik poda tylko je, a jesli nie - to licznik wskaze 0.
+
+poprawiony kod: 
+
+
+#!/bin/bash
+KOPIE="$HOME/kopie"
+mkdir -p "$KOPIE"
+#!/bin/bash
+KOPIE="$HOME/kopie"
+mkdir -p "$KOPIE"
+
+LICZBA_PRZED=$(ls -1 "$KOPIE" 2>/dev/null | wc -l)
+
+cp "$HOME"/*.txt "$KOPIE"
+
+LICZBA_PO=$(ls -1 "$KOPIE" 2>/dev/null | wc -l)
+
+ROZNICA=$((LICZBA_PO - LICZBA_PRZED))
+
+echo "Data: $(date)" > "$KOPIE/info.txt"
+echo "Liczba skopiowanych plików: $ROZNICA" >> "$KOPIE/info.txt"
